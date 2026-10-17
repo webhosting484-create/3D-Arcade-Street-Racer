@@ -1,0 +1,6 @@
+{
+  "name": "Neon Rush - 3D Arcade Street Racer",
+  "description": "High-octane retro 3D arcade street racing across neon night expressway stages with rain-slick asphalt and synth audio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

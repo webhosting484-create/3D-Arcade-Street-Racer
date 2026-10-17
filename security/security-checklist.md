@@ -1,0 +1,22 @@
+# Security Checklist
+
+- [x] **Authentication**: No credentials required; public offline arcade game.
+- [x] **Authorization / RBAC**: Client-side single-player mode; no privilege escalation paths exist.
+- [x] **Session / Token Security**: No session tokens, cookies, or JWTs used; immune to token theft.
+- [x] **Input Validation**: Keyboard, gamepad, and touch inputs are validated and mapped exclusively to boolean flags.
+- [x] **Injection**: No SQL, NoSQL, or command injection possible; no query execution mechanism.
+- [x] **XSS / CSRF**: Dynamic DOM text updates exclusively use `.textContent`; no `eval()` or dangerous `innerHTML` injection.
+- [x] **API Security**: No external backend APIs called from client; zero API key leakage vectors.
+- [x] **Rate Limiting / Abuse**: Fixed-step physics accumulator capped at 5 iterations prevents CPU exhaustion from tab throttling.
+- [x] **File Uploads**: No upload handlers or file parsers implemented.
+- [x] **Database Security**: No database engine attached to client.
+- [x] **Secrets**: Zero hardcoded secrets in source files.
+- [x] **Encryption**: Local storage does not contain sensitive data; web transport secured via standard HTTPS in deployment.
+- [x] **CORS**: Not applicable; no cross-origin fetch requests are made.
+- [x] **Dependency Security**: Zero runtime third-party CDN scripts or vulnerable packages loaded in game execution.
+- [x] **Logging / Monitoring**: No verbose sensitive logs emitted to browser console.
+- [x] **Admin Security**: No administrative interfaces or debug backdoors present.
+- [x] **Deployment / Infrastructure**: Clean static asset bundle runnable in standard sandboxed browser iframes.
+- [x] **Data Privacy**: No telemetry, tracking pixels, or PII collection.
+- [x] **Error Handling**: `localStorage` read/write operations wrapped in `try...catch` blocks with safe defaults.
+- [x] **Backup / Recovery**: Game progress defaults safely reconstruct if local storage is cleared.
